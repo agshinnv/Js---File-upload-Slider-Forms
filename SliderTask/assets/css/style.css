@@ -1,0 +1,63 @@
+.slider{
+    position: relative;
+}
+
+.images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30%;
+    margin-right: 8%;
+}
+
+.images img{
+    position: absolute;
+    opacity: 0;
+    
+}
+
+.images .active-image{
+    opacity: 1;
+}
+
+.images .right{
+    animation-name: right;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+.images .left{
+    animation-name: left;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+.icons i{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    font-size: 50px; 
+    cursor: pointer;   
+}
+
+.icons i:nth-child(1){
+    right: 15px;
+}
+
+@keyframes right{
+    from{
+        transform: translateX(300px);
+    }
+    to{
+        transform:translateX(0)
+    }
+};
+
+@keyframes left{
+    from{
+        transform: translateX(-300px);
+    }
+    to{
+        transform:translateX(0)
+    }
+};
